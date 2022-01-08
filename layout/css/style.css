@@ -33,6 +33,11 @@ a:hover, .active{
 
 a:active, a:focus,input:active, input:focus{outline:0;}
 
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
 
 /* ヘッダー
 ------------------------------------------------------------*/
@@ -96,16 +101,37 @@ section h2 span {
 	padding-bottom: 80px;
 }
 
-
-/* SEC02 Gallery
+/* SEC02 EQUIPMENT
 ------------------------------------------------------------*/
-#sec02{
+#equipment ul{
+	display:-webkit-box;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:flex;
+	-webkit-box-lines:multiple;
+	-moz-box-lines:multiple;
+	-webkit-flex-wrap:wrap;
+	-moz-flex-wrap:wrap;
+	-ms-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+
+#equipment li{
+	float: left;
+	width: calc(calc(100%/4) - 8px);
+	margin: 4px;
+	text-align: center;
+}
+
+
+/* SEC03 Gallery
+------------------------------------------------------------*/
+#sec03{
 	padding: 0 !important;
 }
 
-#sec02 header{
-	display: none;
-}
 
 #gallery{
 	overflow: hidden;
@@ -116,6 +142,7 @@ section h2 span {
 	width: calc(100%/3);
 	line-height: 0;
 }
+
 #gallery li.full{
 	width: 100%;
 }
@@ -242,6 +269,14 @@ section h2 span {
 
 	#sns a:hover img{
 		opacity: .8;
+	}
+
+	/*  */
+	#equipment li{
+		float: left;
+		width: calc(calc(100%/5) - 16px);
+		margin: 8px;
+		text-align: center;
 	}
 	
 	/* SEC03 BRAND
